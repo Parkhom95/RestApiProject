@@ -17,8 +17,8 @@ class ProductReviewFactory extends Factory
     public function definition(): array
     {
         return [
-            'text',
-            'rating'
+            'text' => fake()->text(100),
+            'rating' => fake()->numberBetween(1, 5),
         ];
     }
 }

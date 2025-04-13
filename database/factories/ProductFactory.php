@@ -20,8 +20,8 @@ class ProductFactory extends Factory
         return [
             'name' => fake()->sentence(),
             'description' => fake()->text,
-            'count'=> fake()->randomNumber(),
-            'price' => fake()->randomFloat(),
+            'count'=> fake()->randomNumber(2),
+            'price' => fake()->randomNumber(3),
             'status' => fake()->randomElement([ProductStatus::Draft, ProductStatus::Published]),
         ];
     }
