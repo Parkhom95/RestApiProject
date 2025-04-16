@@ -11,4 +11,6 @@ Route::controller(ProductController::class)->prefix('products')
             ->name('products.show');
         Route::post('', 'store')
             ->name('products.store');
+        Route::post('{product}/review', 'review')
+            ->name('products.review.store');
     });

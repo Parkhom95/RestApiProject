@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 /**
- * 
+ *
  *
  * @property int $id
  * @property int|null $user_id
@@ -39,13 +39,14 @@ class ProductReview extends Model
     use HasFactory;
 
     protected $fillable = [
-      'text',
-      'rating'
+        'user_id',
+        'text',
+        'rating'
     ];
 
 
     protected $casts = [
-      'rating' => 'int'
+        'rating' => 'int'
     ];
 
 
